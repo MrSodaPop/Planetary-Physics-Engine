@@ -8,19 +8,13 @@
     <body style="margin:0;border:0;background-color:black;">
         <center>
             <div id="canvas-wrapper">
-                <div style="height:8vh;width:12vh;padding-top:46vh">
-                    <button id="button" onclick="sizeCanvas();">Start</button>
-                </div>
             </div>
         </center>
         <script>
-            document.getElementById("button").focus();
-            var sizeCanvas = function() {
                 var y = window.innerHeight - 2;
                 var x = y;
                 document.getElementById("canvas-wrapper").innerHTML="<canvas id='canvas' width='" + x + "' height='" + y + "' style='background-color:black;border:1px solid #FFFFFF;'></canvas>"
                 start(1000);
-            }
         </script>
     </body>
 </html>
