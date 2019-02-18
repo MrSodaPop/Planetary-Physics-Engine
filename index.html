@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link href="/CSS/style.css" rel="stylesheet" type="text/css">
+        <script src="/JS/main.js"></script>
+    </head>
+    <body style="border:0;background-color:black;">
+        <script>
+            var y = window.innerHeight;
+            var x = window.innerWidth;
+            if (y < 1000) {
+                x = y;
+            }
+            else {
+                x = 1000;
+                y = 1000;
+            }
+            document.getElementById("canvas-wrapper").innerHTML="
+            <canvas id='canvas' width='" + x + "' height='" + y + "' style='background-color:black;border:1px solid #FFFFFF;'></canvas>"
+        </script>
+        <div id="canvas-wrapper"></div>
+    </body>
+</html>
