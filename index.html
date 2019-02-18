@@ -11,8 +11,14 @@
             </div>
         </center>
         <script>
-                var y = window.innerHeight - 2;
-                var x = y;
+                if (window.innerHeight < window.innerWidth) {
+                    var y = window.innerHeight - 2;
+                    var x = y;
+                }
+                else {
+                    var y = window.innerWidth - 2;
+                    var x = y;
+                }
                 document.getElementById("canvas-wrapper").innerHTML="<canvas id='canvas' width='" + x + "' height='" + y + "' style='background-color:black;border:1px solid #FFFFFF;'></canvas>"
                 start(1000);
         </script>
