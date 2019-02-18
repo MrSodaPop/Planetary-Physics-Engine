@@ -39,7 +39,7 @@ var celestialObjects = [
             y: 0
         },
         mass: mRatio*3.301*10**23,
-        radius: 1
+        radius: y/600
     },
     {
         name:'Venus',
@@ -56,7 +56,7 @@ var celestialObjects = [
             y: 0
         },
         mass: mRatio*4.867*10**24,
-        radius: 1.5
+        radius: 1.5*y/600
     },
     {
         name:'Earth',
@@ -73,7 +73,7 @@ var celestialObjects = [
             y: 0
         },
         mass: mRatio*5.972*10**24,
-        radius: 2
+        radius: 2*y/600
     },
     {
         name:'Mars',
@@ -90,7 +90,7 @@ var celestialObjects = [
             y: 0
         },
         mass: mRatio*6.4127*10**23,
-        radius: 1.5
+        radius: 1.5*y/600
     },
     {
         name:'Jupiter',
@@ -107,7 +107,7 @@ var celestialObjects = [
             y: 0
         },
         mass: mRatio*1.899*10**27,
-        radius: 3
+        radius: 3*y/600
     },
     {
         name:'Saturn',
@@ -124,7 +124,7 @@ var celestialObjects = [
             y: 0
         },
         mass: mRatio*5.685*10**26,
-        radius: 2.5
+        radius: 2.5*y/600
     },
     {
         name:'Uranus',
@@ -141,7 +141,7 @@ var celestialObjects = [
             y: 0
         },
         mass: mRatio*8.682*10**25,
-        radius: 2
+        radius: 2*y/600
     },
     {
         name:'Neptune',
@@ -158,7 +158,7 @@ var celestialObjects = [
             y: 0
         },
         mass: mRatio*1.024*10**26,
-        radius: 2
+        radius: 2*y/600
     },
     {
         name:'Pluto',
@@ -175,7 +175,7 @@ var celestialObjects = [
             y: 0
         },
         mass: mRatio*1.471*10**22,
-        radius: 0.5
+        radius: 0.5*y/600
     }
 ]
 
