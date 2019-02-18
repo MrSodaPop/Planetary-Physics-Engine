@@ -22,19 +22,16 @@ var updateAcceleration = function(object) {
         if (object.name !== celestialObjects[i].name) {
             let r = Math.sqrt(Math.pow((celestialObjects[i].pos.y - object.pos.y),2)+Math.pow((celestialObjects[i].pos.x - object.pos.x),2))    // Finding Distance between the two objects
             let theta = Math.atan((celestialObjects[i].pos.y - object.pos.y)/(celestialObjects[i].pos.x - object.pos.x))    // Using pos of both objects to find agnle of acceleration.
+            let sin = 1;
+            let cos = 1;
             if (celestialObjects[i].pos.x < object.pos.x) {
-                console.log(theta);
-                if (theta > 0) {
-                    theta = Math.PI - theta;
-                }
-                else {
-                    theta =  Math.abs(theta) - Math.PI;
-                }
-                console.log(theta)
+                    sin = -1;
+                    cos = -1;
             }
             let totalAcc = G*celestialObjects[i].mass/(Math.pow(r,2));
-            newAcceleration.x = newAcceleration.x + Math.sin(theta) * totalAcc
-            newAcceleration.y = newAcceleration.y + Math.cos(theta) * totalAcc
+
+            newAcceleration.x = newAcceleration.x + Math.cos(theta) * totalAcc * cos;
+            newAcceleration.y = newAcceleration.y + Math.sin(theta) * totalAcc * sin;
         }
     }
     object.acc = newAcceleration;

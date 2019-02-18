@@ -2,11 +2,11 @@ var celestialObjects = [
     {
         name:'Mass One',
         pos: {
-            x: Math.floor(Math.random() * (window.innerHeight - 1)), // accounting for canvas dimensions (-2 + 1)
-            y: Math.floor(Math.random() * (window.innerHeight - 1))
+            x: 150,//Math.floor(Math.random() * (window.innerHeight - 1)), // accounting for canvas dimensions (-2 + 1)
+            y: 150//Math.floor(Math.random() * (window.innerHeight - 1))
         },
         vel: {  // m/s
-            x: 0,
+            x: 0.15,
             y: 0
         },
         acc: {  // m/s/s
@@ -19,11 +19,11 @@ var celestialObjects = [
     {
         name:'Mass Two',
         pos: {
-            x: Math.floor(Math.random() * (window.innerHeight - 1)),
-            y: Math.floor(Math.random() * (window.innerHeight - 1))
+            x: window.innerHeight - 150,//Math.floor(Math.random() * (window.innerHeight - 1)),
+            y: window.innerHeight - 150//Math.floor(Math.random() * (window.innerHeight - 1))
         },
         vel: {
-            x: 0,
+            x: -0.15,
             y: 0
         },
         acc: {
