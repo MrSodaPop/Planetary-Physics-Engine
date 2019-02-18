@@ -1,31 +1,26 @@
 <html>
     <head>
-        <link href="/CSS/style.css" rel="stylesheet" type="text/css">
-        <script src="/JS/main.js"></script>
+        <link href="CSS/style.css" rel="stylesheet" type="text/css">
+        <script src="JS/main.js"></script>
+        <script src="JS/calculations.js"></script>
+        <script src="JS/draw.js"></script>
     </head>
     <body style="margin:0;border:0;background-color:black;">
-        <script>
-            var sizeCanvas = function() {
-                var y = window.innerHeight;
-                var x = window.innerWidth;
-                console.log(x,y)
-                if (y < 1000) {
-                    y = y - 2; //acounting for border size.
-                    x = y;
-                }
-                else {
-                    x = 1000;
-                    y = 1000;
-                }
-                document.getElementById("canvas-wrapper").innerHTML="<canvas id='canvas' width='" + x + "' height='" + y + "' style='background-color:black;border:1px solid #FFFFFF;'></canvas>"
-            }
-            </script>
         <center>
             <div id="canvas-wrapper">
                 <div style="height:8vh;width:12vh;padding-top:46vh">
-                    <button onclick="sizeCanvas()">Start</button>
+                    <button id="button" onclick="sizeCanvas();">Start</button>
                 </div>
             </div>
         </center>
+        <script>
+            document.getElementById("button").focus();
+            var sizeCanvas = function() {
+                var y = window.innerHeight - 2;
+                var x = y;
+                document.getElementById("canvas-wrapper").innerHTML="<canvas id='canvas' width='" + x + "' height='" + y + "' style='background-color:black;border:1px solid #FFFFFF;'></canvas>"
+                start(1000);
+            }
+        </script>
     </body>
 </html>
