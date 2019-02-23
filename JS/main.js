@@ -9,22 +9,22 @@ var celestialObjects = [
     {
         name:'Alpha',
         pos: {
-            x: x/4,
-            y: y/4
+            x: x/2,
+            y: y/2
         },
         vel: {  // px/s
             x: 0,
-            y: 0
+            y: .1
         },
         acc: {  // px/s/s
             x: 0,
             y: 0
         },
-        mass: 1.989*10**11,
-        radius: y/30 // px
+        mass: 1.989*10**12,
+        radius: y/7 // px
     },
     {
-        name:'Omega',
+        name:'Beta',
         pos: {
             x: 3*x/4,
             y: 3*y/4
@@ -37,8 +37,59 @@ var celestialObjects = [
             x: 0,
             y: 0
         },
-        mass: 1.989*10**11,
-        radius: y/30 // px
+        mass: 1.989*10**10,
+        radius: y/35 // px
+    },
+    {
+        name:'Gamma',
+        pos: {
+            x: x/4,
+            y: y/4
+        },
+        vel: {  // px/s
+            x: 0,
+            y: 0
+        },
+        acc: {  // px/s/s
+            x: 0,
+            y: 0
+        },
+        mass: 1.989*10**9,
+        radius: y/80 // px
+    },
+    {
+        name:'Delta',
+        pos: {
+            x: 3*x/4,
+            y: y/4
+        },
+        vel: {  // px/s
+            x: 0,
+            y: 0
+        },
+        acc: {  // px/s/s
+            x: 0,
+            y: 0
+        },
+        mass: 1.989*10**10.5,
+        radius: y/25 // px
+    },
+    {
+        name:'Omega',
+        pos: {
+            x: x/4,
+            y: 3*y/4
+        },
+        vel: {  // px/s
+            x: 0,
+            y: 0
+        },
+        acc: {  // px/s/s
+            x: 0,
+            y: 0
+        },
+        mass: 1.989*10**9.5,
+        radius: y/60 // px
     }
 ]
 

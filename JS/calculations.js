@@ -5,19 +5,9 @@ var updatePosition = function(object) {
     for (let i = 0; i < celestialObjects.length; i++) {
         if (object.name != celestialObjects[i].name) {
             let r = Math.sqrt(Math.pow((celestialObjects[i].pos.y - object.pos.y),2)+Math.pow((celestialObjects[i].pos.x - object.pos.x),2))
-            if (r <= celestialObjects[i].radius + object.radius + 1) {
-                let PObject = {
-                    x: object.mass * object.vel.x,
-                    y: object.mass * object.vel.y
-                };
-                let PCelestial = {
-                    x: celestialObjects[i].mass * celestialObjects[i].vel.x,
-                    y: celestialObjects[i].mass * celestialObjects[i].vel.y
-                };
-                PObject.x += PCelestial.x;
-                PObject.y += PCelestial.y;
-                object.vel.x = (PObject.x/2)/object.mass;
-                object.vel.y = (PObject.y/2)/object.mass;
+            if (r <= celestialObjects[i].radius + object.radius) {
+                object.vel.x = (object.vel.x*(object.mass - celestialObjects[i].mass)) / (object.mass + celestialObjects[i].mass);
+                object.vel.y = (object.vel.y*(object.mass - celestialObjects[i].mass)) / (object.mass + celestialObjects[i].mass);
             }
         }
     }
